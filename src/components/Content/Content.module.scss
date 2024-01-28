@@ -1,0 +1,47 @@
+@import '../../styles/variables.scss';
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+@media (max-width: 768px) {
+    .content {
+        width: 100%;
+    }
+
+    .mobile_dropdown {
+        background-color: $base-purple;
+        border-radius: 10px;
+        padding: 10px 25px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        .menu {
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .text {
+                font-size: 16px;
+            }
+
+            .dropdown {
+                background-color: transparent;
+                color: white;
+                font-size: 12px;
+                border: none;
+                display: flex;
+                align-items: center;
+
+                .arrow {
+                    fill: white;
+                }
+            }
+        }
+    }
+}   

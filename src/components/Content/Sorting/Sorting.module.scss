@@ -1,0 +1,43 @@
+@import '../../../styles/variables.scss';
+
+.sorting {
+    @include block-styles();
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+    padding: 0;
+    border: 2px solid $base-purple;
+}
+
+.input {
+    display: none;
+
+    &:checked + .item {
+        display: block;
+        background-color: $base-purple;
+        color: $base-lightpurple;
+    }
+}
+
+.item {
+    padding: 15px 15px;
+    cursor: pointer;
+    border-right: 2px solid $base-purple;
+    color: $base-purple;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+
+    @media (max-width: 768px) {
+        font-size: 12px;
+    }
+
+    &:last-child {
+        border-right: none;
+    }
+
+    &:hover {
+        background-color: $base-purple;
+        color: $base-lightpurple;
+    }
+}

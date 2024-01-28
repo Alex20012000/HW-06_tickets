@@ -1,0 +1,71 @@
+@import '../../../styles/variables.scss';
+
+
+.wrapper {
+    @include block-styles();
+    padding: 15px 15px;
+
+    @media (max-width: 768px) {
+        background: none;
+        color: white;
+    }
+
+    @media (max-width: 420px) {
+        padding: 0;
+    }
+}
+.title {
+    font-size: 20px;
+    font-weight: 700;
+    color: $base-purple;
+    margin-bottom: 19px;
+
+    @media (max-width: 768px) {
+        color: white;
+    }
+
+    @media (max-width: 420px) {
+        font-size: 16px;
+    }
+}
+
+.label {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+    font-size: 16px;
+    margin-bottom: 19px;
+    margin-left: 15px;
+
+    @media (max-width: 420px) {
+        font-size: 14px;
+        margin-left: 0;
+    }
+}
+
+.circle {
+    @include filters-style();
+    border-radius: 100%;
+
+    @media (max-width: 768px) {
+        border-color: white;
+    }
+    
+    &:checked {
+        &::before {
+            content: '';
+            display: block;
+            width: 15px;
+            height: 15px;
+            background-color: $base-purple;
+            border-radius: 50%;
+
+            @media (max-width: 768px) {
+                background-color: white;
+            }
+        }
+    }
+}
+

@@ -1,0 +1,59 @@
+@import '../../../styles/variables.scss';
+
+.ticket {
+    @include block-styles();
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 727px;
+    height: 174px;
+
+    @media (max-width: 768px) {
+        width: 100%;
+    }
+} 
+
+.top_content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.price {
+    font-size: 32px;
+    font-weight: 700;
+    color: $base-purple;
+
+    @media (max-width: 420px) {
+        font-size: 25px;
+    }
+}
+
+.logo {
+    max-width: 180px;
+    max-height: 51px;
+    @media (max-width: 420px) {
+        max-width: 130px;
+        max-height: 41px;
+    }
+}
+
+.bottom_content {
+    display: flex;
+    justify-content: space-between;
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        font-weight: 500;
+        font-size: 16px;
+    }
+
+    &__value {
+        color: $base-purple;
+    }
+    
+    &__title {
+        font-style: normal;
+    }
+}

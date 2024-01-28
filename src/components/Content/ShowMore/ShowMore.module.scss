@@ -1,0 +1,24 @@
+@import '../../../styles/variables.scss';
+
+.showMore {
+    cursor: pointer;
+    width: 100%;
+    padding: 16px 20px;
+    background-color: $base-purple;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+
+    &:hover {
+        -webkit-box-shadow: rgba(255, 255, 255, .2) 0 3px 15px inset, rgba(0, 0, 0, .1) 0 3px 5px, rgba(0, 0, 0, .1) 0 10px 13px;
+        box-shadow: rgba(255, 255, 255, .2) 0 3px 15px inset, rgba(0, 0, 0, .1) 0 3px 5px, rgba(0, 0, 0, .1) 0 10px 13px;
+        -webkit-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+        transform: scale(1.05);
+        color: $base-purple;
+        background-color: $base-lavender;
+    }
+}
